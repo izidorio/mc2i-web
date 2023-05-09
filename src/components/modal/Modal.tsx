@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode, useState } from "react";
+import { X } from "@phosphor-icons/react";
 
 export function useModal() {
   const [openModal, setOpenModal] = useState(false);
@@ -15,11 +16,11 @@ export function useModal() {
             >
               <div className="relative mx-2 my-6 w-auto max-w-2xl md:mx-auto z-10">
                 <button
-                  className="absolute right-4 z-10 top-2 cursor-pointer text-xl text-gray-500 transition hover:text-gray-700"
+                  className="absolute right-2 z-10 top-2 cursor-pointer text-gray-500 transition hover:text-gray-700"
                   type="button"
                   onClick={() => setOpenModal(false)}
                 >
-                  X
+                  <X size={24} weight="bold" />
                 </button>
                 <div
                   className="flex w-full flex-col rounded-lg border-0 bg-white shadow-md outline-none focus:outline-none"

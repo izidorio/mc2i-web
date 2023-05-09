@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import patinho from "@/assets/images/patinho.png";
 import Image from "next/image";
+import { Minus, Plus } from "@phosphor-icons/react";
 
 interface DetailProps {
   setOpenModal: Dispatch<SetStateAction<boolean>>;
@@ -124,12 +125,12 @@ export function Detail({ setOpenModal }: DetailProps) {
       </div>
       <div className="flex items-center justify-between rounded-b border-t border-solid border-slate-200 p-4">
         <div className="flex items-center gap-2">
-          <button className="flex items-center bg-brand text-white font-bold text-xl rounded-full px-3 ">
-            -
+          <button className="flex items-center bg-brand text-white font-bold text-xl rounded-full p-2 ">
+            <Minus size={18} weight="bold" />
           </button>
           <span>1,250 Kg</span>
-          <button className="flex items-center bg-brand text-white font-bold text-xl rounded-full px-3">
-            +
+          <button className="flex items-center bg-brand text-white font-bold text-xl rounded-full p-2">
+            <Plus size={18} weight="bold" />
           </button>
         </div>
         <button
