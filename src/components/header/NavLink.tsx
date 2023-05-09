@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,7 +12,7 @@ export function NavLink(props: NavLinkProps) {
     <Link
       href={props.href}
       data-active={activeHref === props.href}
-      className="rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700 hover:text-white data-[active=true]:bg-gray-700"
+      className="rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-brand hover:text-white data-[active=true]:bg-brand data-[active=true]:text-white"
     >
       {props.children}
     </Link>

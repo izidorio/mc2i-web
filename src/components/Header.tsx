@@ -20,6 +20,9 @@ export function Header() {
                 <div className="ml-10 flex items-baseline space-x-4 text-zinc-500">
                   <NavLink href="/">Home</NavLink>
                   <NavLink href="/kits">Kits</NavLink>
+                  <NavLink href="/kits">Bovino</NavLink>
+                  <NavLink href="/kits">Aves</NavLink>
+                  <NavLink href="/kits">Suíno</NavLink>
                   <NavLink href="/contato">Contato</NavLink>
                 </div>
               </div>
@@ -29,14 +32,14 @@ export function Header() {
                 type="button"
                 aria-label="Menu"
                 aria-expanded="false"
-                className="inline-flex items-center justify-center rounded-md p-2 transition duration-300 ease-in-out hover:bg-zinc-500 focus:bg-zinc-500 focus:outline-none"
+                className="inline-flex items-center justify-center rounded-md bg-brand p-2 transition duration-300 ease-in-out hover:bg-brand focus:bg-brand focus:outline-none"
                 onClick={() => setOpen(!open)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
-                  fill="#000000"
+                  fill="#fff"
                   viewBox="0 0 256 256"
                 >
                   <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
@@ -45,19 +48,19 @@ export function Header() {
             </div>
           </div>
         </div>
-        <div data-open={open} className="flex data-[open=true]:hidden md:hidden">
+        <div data-open={!open} className="flex data-[open=true]:hidden md:hidden">
           <div className="px-2 pb-3 pt-2 sm:px-3">
             <a
               href="#"
               className="block rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700 hover:text-white"
             >
-              home {open ? "open" : "closed"}
+              Home {open ? "open" : "closed"}
             </a>
             <a
               href="#"
               className="block rounded-md px-3 py-2 text-sm font-medium transition duration-150 ease-in-out hover:bg-gray-700 hover:text-white"
             >
-              sobre
+              Kits
             </a>
           </div>
         </div>
