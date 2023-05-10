@@ -123,6 +123,17 @@ export function Detail({ setOpenModal }: DetailProps) {
           </p>
         </div>
       </div>
+
+      <div className="mb-4 px-4">
+        <label className="mb-2 block text-sm text-gray-700">Observação</label>
+        <input
+          className="w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700  focus:outline-none"
+          type="text"
+          placeholder="Username"
+        />
+        <p className="text-xs italic text-red-500"></p>
+      </div>
+
       <div className="flex items-center justify-between rounded-b border-t border-solid border-slate-200 p-4">
         <div className="flex items-center gap-2">
           <button className="flex items-center bg-brand text-white font-bold text-xl rounded-full p-2 ">
