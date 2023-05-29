@@ -13,6 +13,27 @@ export default function Home() {
             <Card />
             <Card />
             <Card />
+            <Card />
+          </div>
+        </div>
+        <div className="flex w-full flex-col py-4">
+          <h2 className="text-xl font-bold text-brand">Kits</h2>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 ">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
+        <div className="flex w-full flex-col py-4">
+          <h2 className="text-xl font-bold text-brand">Kits</h2>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 ">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
       </main>

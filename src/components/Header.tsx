@@ -3,6 +3,8 @@ import Image from "next/image";
 import logoImg from "../../public/logo.svg";
 import { useState } from "react";
 import { NavLink } from "./header/NavLink";
+import { ShoppingCartSimple } from "@phosphor-icons/react";
+import { SignIn } from "@/components/auth/SignIn";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -16,17 +18,17 @@ export function Header() {
               <div className="flex-shrink-0">
                 <Image className="h-12 md:h-14" src={logoImg} alt="Mercado de Carnes" height={56} />
               </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4 text-zinc-500">
-                  <NavLink href="/">Home</NavLink>
-                  <NavLink href="/kits">Kits</NavLink>
-                  <NavLink href="/kits">Bovino</NavLink>
-                  <NavLink href="/kits">Aves</NavLink>
-                  <NavLink href="/kits">Suíno</NavLink>
-                  <NavLink href="/contato">Contato</NavLink>
-                </div>
+
+              <div className="flex gap-4 items-center text-brand">
+                <ShoppingCartSimple
+                  size={32}
+                  weight="fill"
+                  className="hover:text-brand/90 cursor-pointer"
+                />
+                <SignIn />
               </div>
             </div>
+            {/* toggle menu */}
             <div className="mr-2 md:hidden">
               <button
                 type="button"
@@ -37,8 +39,8 @@ export function Header() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
+                  width="24"
+                  height="24"
                   fill="#fff"
                   viewBox="0 0 256 256"
                 >
@@ -48,6 +50,8 @@ export function Header() {
             </div>
           </div>
         </div>
+
+        {/* menu mobile */}
         <div data-open={!open} className="flex data-[open=true]:hidden md:hidden">
           <div className="px-2 pb-3 pt-2 sm:px-3">
             <a

@@ -1,4 +1,3 @@
-import { AuthProvider } from "@/contexts/AuthContext";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 const poppins = Poppins({ weight: ["100", "400", "700"], subsets: ["latin"] });
@@ -11,9 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br" className={poppins.className}>
-      <AuthProvider>
-        <body className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</body>
-      </AuthProvider>
+      <body className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</body>
     </html>
   );
 }

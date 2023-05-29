@@ -6,7 +6,6 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative h-screen">
-      layout\auth
       <main className="mx-auto max-w-4xl px-8 py-24">{children}</main>
     </div>
   );

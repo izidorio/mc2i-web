@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import diadia from "@/assets/images/diadia.png";
-import { useModal } from "../modal/Modal";
+import { useModal } from "@/components/modal/Modal";
 import { Detail } from "./Detail";
 
 export function Card() {
