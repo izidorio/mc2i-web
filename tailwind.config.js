@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         brand: "#991D1D",
-        "brand-d": "#991D1D",
+        "brand-h": "#911515",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -17,5 +17,23 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          ".btn-brand": {
+            "background-color": "#991D1D",
+            "border-color": "#991D1D",
+          },
+          ".btn-brand:hover": {
+            "background-color": "#911515",
+            "border-color": "#911515",
+          },
+        },
+      },
+    ],
+    darkTheme: "light",
+  },
 };
