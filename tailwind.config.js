@@ -23,6 +23,7 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          primary: "#991D1D",
           ".btn-brand": {
             "background-color": "#991D1D",
             "border-color": "#991D1D",

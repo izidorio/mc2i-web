@@ -1,4 +1,4 @@
-import { setCookie, parseCookies } from "nookies";
+import { setCookie, parseCookies, destroyCookie } from "nookies";
 import pkg from "../../package.json";
 
 export const cookies = {
@@ -12,5 +12,8 @@ export const cookies = {
   get(key: string) {
     const cookies = parseCookies();
     return cookies[`${pkg.name}-${key}`];
+  },
+  delete(key: string) {
+    destroyCookie(undefined, `${pkg.name}-${key}`);
   },
 };

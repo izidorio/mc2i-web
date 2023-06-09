@@ -28,7 +28,7 @@ export function InputMask({ label, name, readOnly = false, className, mask, ...r
           <ReactInputMask
             onBlur={onBlur}
             onChange={onChange}
-            checked={value}
+            value={value}
             inputRef={ref}
             mask={mask}
             className="font-normal text-gray-500 focus:outline-none border-none"

@@ -5,7 +5,7 @@ interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
 }
 export function Form({ children, ...rest }: FormProps) {
   return (
-    <form className="flex flex-col gap-2" {...rest}>
+    <form className="flex flex-col gap-4" {...rest}>
       {children}
     </form>
   );
